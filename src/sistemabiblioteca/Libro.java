@@ -106,6 +106,16 @@ public class Libro {
         }
     }
     return false;
-} 
+    } 
+    
+    public boolean eliminarLibro(String isbn) {
+        for (Libro libro : libros) {
+            if (libro.getIsbn().equalsIgnoreCase(isbn)) {
+                libros.remove(libro);
+                return true;
+            }
+        }
+        return false;
+    } 
     
 }
