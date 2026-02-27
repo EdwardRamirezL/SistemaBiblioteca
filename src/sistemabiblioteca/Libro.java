@@ -1,14 +1,17 @@
 package sistemabiblioteca;
 
+import java.util.ArrayList;
+
 public class Libro {
     private String isbn,titulo,autor,genero;
     private int anioPublicacion;
     private boolean disponible;
-
+    
+    private ArrayList<Libro> libros = new ArrayList<>();
+    
     public Libro(){
         
     }
-    
     public Libro(String isbn, String titulo, String autor, String genero, int anioPublicacion, boolean disponible) {
         this.isbn = isbn;
         this.titulo = titulo;
@@ -62,7 +65,21 @@ public class Libro {
     public void setDisponible(boolean disponible) {
         this.disponible = disponible;
     }
+
+    @Override
+    public String toString() {
+        return "Libro{" + "isbn=" + isbn 
+                + ", titulo=" + titulo 
+                + ", autor=" + autor 
+                + ", genero=" + genero 
+                + ", anioPublicacion=" + anioPublicacion 
+                + ", disponible=" + disponible + '}';
+    }
     
+    
+    public void agregarLibro(Libro libro){
+        libros.add(libro);
+    }
     
     
 }
