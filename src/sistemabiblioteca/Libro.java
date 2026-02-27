@@ -12,6 +12,13 @@ public class Libro {
     public Libro(){
         
     }
+     public Libro(String titulo, String autor, String genero, int anioPublicacion, boolean disponible) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.genero = genero;
+        this.anioPublicacion = anioPublicacion;
+        this.disponible = disponible;
+    }
     public Libro(String isbn, String titulo, String autor, String genero, int anioPublicacion, boolean disponible) {
         this.isbn = isbn;
         this.titulo = titulo;
