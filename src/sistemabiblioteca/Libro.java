@@ -92,6 +92,20 @@ public class Libro {
             }
         }
         return null;
+    }  
+    
+    public boolean actualizarLibro(String isbn, Libro datosActualizados) {
+    for (Libro libro : libros) {
+        if (libro.getIsbn().equalsIgnoreCase(isbn)) {
+            libro.setTitulo(datosActualizados.getTitulo());
+            libro.setAutor(datosActualizados.getAutor());
+            libro.setGenero(datosActualizados.getGenero());
+            libro.setAnioPublicacion(datosActualizados.getAnioPublicacion());
+            libro.setDisponible(datosActualizados.isDisponible());
+            return true;
+        }
     }
+    return false;
+} 
     
 }
