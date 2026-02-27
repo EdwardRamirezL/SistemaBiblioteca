@@ -81,5 +81,17 @@ public class Libro {
         libros.add(libro);
     }
     
+    public ArrayList<Libro> listarLibros(){
+        return libros;
+    }
+    
+     public Libro buscarPorIsbn(String isbn) {
+        for (Libro libro : libros) {
+            if (libro.getIsbn().equalsIgnoreCase(isbn)) {
+                return libro;
+            }
+        }
+        return null;
+    }
     
 }
